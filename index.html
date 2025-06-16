@@ -1,0 +1,1378 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<style>
+  html {
+    scroll-behavior: smooth;
+  }
+</style>
+
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base target="_self">
+    <title>Heritage Khadi - The Fabric of Freedom</title>
+    <meta name="description" content="Discover the rich heritage of Khadi fabric - its history, craftsmanship, sustainability, and modern applications in fashion and lifestyle.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@preline/preline@2.0.0/dist/preline.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --ivory: #FFFFF0;
+            --beige: #e9e9c7;
+            --maroon: #800000;
+            --indigo: #3641d8;
+            --gold: #D4AF37;
+        }
+        
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--ivory);
+            color: #eb0000;
+            scroll-behavior: smooth;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+            color: var(--maroon);
+        }
+        
+        .hero-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+            opacity: 0.7;
+        }
+        
+        .hero-overlay {
+            background: linear-gradient(to bottom, rgba(255, 255, 255, 0.336), rgba(245, 245, 220, 0.8));
+        }
+        
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: var(--gold);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -40px;
+            top: 0;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: var(--gold);
+            border: 4px solid var(--maroon);
+        }
+        
+        .masonry-grid {
+            column-count: 3;
+            column-gap: 1rem;
+        }
+        
+        @media (max-width: 768px) {
+            .masonry-grid {
+                column-count: 2;
+            }
+        }
+        
+        @media (max-width: 640px) {
+            .masonry-grid {
+                column-count: 1;
+            }
+        }
+        
+        .filter-active {
+            background-color: var(--maroon);
+            color: white;
+        }
+        
+        .lightbox-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+        
+        .lightbox-overlay.active {
+            opacity: 1;
+            pointer-events: all;
+        }
+        
+        .lightbox-content {
+            max-width: 90%;
+            max-height: 90%;
+        }
+        
+        .animate-fade-in {
+            animation: fadeIn 1s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .animate-slide-up {
+            animation: slideUp 0.8s ease-out;
+        }
+        
+        @keyframes slideUp {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+    </style>
+</head>
+<body class="dark:bg-gray-500 dark:text-white">
+<!-- Navigation -->
+<nav class="bg-white dark:bg-gray-800 shadow-md sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between h-16">
+      <div class="flex items-center">
+        <a href="#home" class="flex-shrink-0 flex items-center">
+          <img class="h-8 w-auto" src="" alt="">
+          <span class="ml-2 text-xl font-bold text-maroon dark:text-gold">Know Khadi </span>
+        </a>
+      </div>
+      <div class="hidden md:ml-6 md:flex md:items-center md:space-x-8">
+        <a href="#home" class="nav-link text-gray-700 dark:text-gray-300 hover:text-maroon dark:hover:text-gold px-3 py-2 text-sm font-medium">Home</a>
+        <a href="#about" class="nav-link text-gray-700 dark:text-gray-300 hover:text-maroon dark:hover:text-gold px-3 py-2 text-sm font-medium">About</a>
+        <a href="#types" class="nav-link text-gray-700 dark:text-gray-300 hover:text-maroon dark:hover:text-gold px-3 py-2 text-sm font-medium">Types</a>
+        <a href="#making" class="nav-link text-gray-700 dark:text-gray-300 hover:text-maroon dark:hover:text-gold px-3 py-2 text-sm font-medium">Khadi Making</a>
+        <a href="#sustainability" class="nav-link text-gray-700 dark:text-gray-300 hover:text-maroon dark:hover:text-gold px-3 py-2 text-sm font-medium">Sustainability</a>
+        <a href="#shopping" class="nav-link text-gray-700 dark:text-gray-300 hover:text-maroon dark:hover:text-gold px-3 py-2 text-sm font-medium">Shopping Guide</a>
+        <a href="#history" class="nav-link text-gray-700 dark:text-gray-300 hover:text-maroon dark:hover:text-gold px-3 py-2 text-sm font-medium">History</a>
+        <a href="#gallery" class="nav-link text-gray-700 dark:text-gray-300 hover:text-maroon dark:hover:text-gold px-3 py-2 text-sm font-medium">Gallery</a>
+        <a href="#videos" class="nav-link text-gray-700 dark:text-gray-300 hover:text-maroon dark:hover:text-gold px-3 py-2 text-sm font-medium">Videos</a>
+      </div>
+      <div class="-mr-2 flex items-center md:hidden">
+        <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none" aria-controls="mobile-menu" aria-expanded="false" onclick="toggleMobileMenu()">
+          <span class="sr-only">Open main menu</span>
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile menu -->
+  <div class="hidden md:hidden" id="mobile-menu">
+    <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+      <a href="#home" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-maroon hover:bg-beige dark:text-gray-300 dark:hover:text-gold dark:hover:bg-gray-700">Home</a>
+      <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-maroon hover:bg-beige dark:text-gray-300 dark:hover:text-gold dark:hover:bg-gray-700">About Khadi</a>
+      <a href="#types" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-maroon hover:bg-beige dark:text-gray-300 dark:hover:text-gold dark:hover:bg-gray-700">Types of Khadi</a>
+      <a href="#making" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-maroon hover:bg-beige dark:text-gray-300 dark:hover:text-gold dark:hover:bg-gray-700">How Khadi is Made</a>
+      <a href="#sustainability" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-maroon hover:bg-beige dark:text-gray-300 dark:hover:text-gold dark:hover:bg-gray-700">Sustainability</a>
+      <a href="#shopping" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-maroon hover:bg-beige dark:text-gray-300 dark:hover:text-gold dark:hover:bg-gray-700">Shopping Guide</a>
+      <a href="#history" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-maroon hover:bg-beige dark:text-gray-300 dark:hover:text-gold dark:hover:bg-gray-700">History</a>
+      <a href="#gallery" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-maroon hover:bg-beige dark:text-gray-300 dark:hover:text-gold dark:hover:bg-gray-700">Gallery</a>
+      <a href="#videos" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-maroon hover:bg-beige dark:text-gray-300 dark:hover:text-gold dark:hover:bg-gray-700">Videos</a>
+    </div>
+  </div>
+</nav>
+
+
+    <!-- Main Content -->
+    <main>
+        <!-- Home Section -->
+        <section id="home" class="relative h-screen flex items-center justify-center overflow-hidden">
+            <video autoplay muted loop class="hero-video">
+                <source src="https://assets.mixkit.co/videos/preview/mixkit-hands-of-a-woman-weaving-on-a-handloom-11739-large.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="hero-overlay absolute inset-0"></div>
+            <div class="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto animate-fade-in">
+                <h1 class="text-4xl md:text-6xl font-bold text-maroon mb-6">The Heritage of Khadi</h1>
+                <p class="text-xl md:text-2xl text-gray-800 mb-8">Discover the fabric that clothed a revolution and continues to weave India's sustainable future</p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <button class="bg-maroon hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-full transition duration-300 transform hover:scale-105" onclick="navigate(null, 'about')">
+                        Explore Khadi
+                    </button>
+                    <button class="bg-transparent border-2 border-maroon text-maroon hover:bg-maroon hover:text-white font-bold py-3 px-6 rounded-full transition duration-300 transform hover:scale-105" onclick="navigate(null, 'history')">
+                        Our History
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Blogs Section -->
+        <section class="py-16 bg-white dark:bg-gray-900 ">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-maroon dark:text-gold mb-4">Featured Articles</h2>
+                    <p class="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">Explore our curated collection of articles on Khadi's heritage, craftsmanship, and modern applications</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-white dark:bg-gray-700 rounded-lg overflow-hidden shadow-lg card-hover transition duration-300">
+                        <img src="https://www.mkgandhi.org/images/logo-header.jpg" alt="Khadi Fashion" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <div class="flex items-center mb-2">
+                                <span class="text-xs font-semibold text-gold">A CLOTH AND BEYOND</span>
+                                <span class="mx-2 text-gray-400">•</span>
+                                <span class="text-xs text-gray-500 dark:text-gray-400">by Ekta jain</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-maroon dark:text-white mb-2"> Examines khadi as a symbol of resistance and self-reliance during India's freedom struggle.</h3>
+                            <p class="text-gray-600 dark:text-gray-300 mb-4">It delves into Gandhi’s vision of khadi as the fabric of self-reliance, unity, and national identity.</p>
+                            <a href="#" class="text-gold hover:text-maroon dark:hover:text-gold font-medium inline-flex items-center" onclick="navigate(event, 'blog')">
+                                <a href="https://www.mkgandhi.org/articles/khadi-a-cloth-and-beyond.html" class="btn">Read More</a>
+
+                                <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white dark:bg-gray-700 rounded-lg overflow-hidden shadow-lg card-hover transition duration-300">
+                        <img src="https://www.jaminidesign.com/img/cms/Images%20principales%20redimensionn%C3%A9es/khadi.jpg" alt="Khadi Weaving" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <div class="flex items-center mb-2">
+                                <span class="text-xs font-semibold text-gold">the Revolutionary fabric</span>
+                                <span class="mx-2 text-gray-400">•</span>
+                                <span class="text-xs text-gray-500 dark:text-gray-400">By jamini</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-maroon dark:text-white mb-2">If we have the khadi spirit in us, we would surround ourselves with simplicity in every walk of life</h3>
+                            <p class="text-gray-600 dark:text-gray-300 mb-4">A deep dive into the traditional methods of Khadi production and the skilled artisans keeping this craft alive.</p>
+                            <a href="#" class="text-gold hover:text-maroon dark:hover:text-gold font-medium inline-flex items-center" onclick="navigate(event, 'blog')">
+                                <a href="https://www.jaminidesign.com/en/blog/khadi-the-revolutionary-fabric-b47.html" class="btn">Read More</a>
+
+                                <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white dark:bg-gray-700 rounded-lg overflow-hidden shadow-lg card-hover transition duration-300">
+                        <img src="https://static.fibre2fashion.com//articleresources/images/83/8264/khadi_big_Big.jpg" alt="Khadi Sustainability" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <div class="flex items-center mb-2">
+                                <span class="text-xs font-semibold text-gold">Tradition to Fashion</span>
+                                <span class="mx-2 text-gray-400">•</span>
+                                <span class="text-xs text-gray-500 dark:text-gray-400">Jan , 2019</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-maroon dark:text-white mb-2"> a fashion statement in India and is gradually getting popular across the globe, says Ashok Athalye</h3>
+                            <p class="text-gray-600 dark:text-gray-300 mb-4">fabric made by hand-spun and hand-woven cotton, silk, wool or a mixture of these fibres. It is a traditional way of textile manufacturing</p>
+                            <a href="#" class="text-gold hover:text-maroon dark:hover:text-gold font-medium inline-flex items-center" onclick="navigate(event, 'blog')">
+                               <a href="https://www.fibre2fashion.com/industry-article/8264/khadi-tradition-to-fashion" class="btn">Read More </a>
+
+                                <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="text-center mt-12">
+                    <button class="bg-transparent border-2 border-maroon text-maroon hover:bg-maroon hover:text-white font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105" onclick="navigate(null, 'blog')">
+                        <a href="https://www.google.com/search?q=articles+on+khadi&oq=&gs_lcrp=EgZjaHJvbWUqCQgAEEUYOxjCAzIJCAAQRRg7GMIDMgkIARBFGDsYwgMyCQgCEEUYOxjCAzIJCAMQRRg7GMIDMgkIBBBFGDsYwgMyCQgFEEUYOxjCAzIJCAYQRRg7GMIDMgkIBxBFGDsYwgPSAQozNTU1ODJqMGo3qAIIsAIB8QVpgopqHyW1GPEFaYKKah8ltRg&sourceid=chrome&ie=UTF-8" class="btn">View All Articles</a>
+
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Video Section -->
+        <section class="py-16 bg-white dark:bg-gray-900">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-maroon dark:text-gold mb-4">Khadi in Motion</h2>
+                    <p class="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">Watch the beauty of Khadi come to life through these captivating videos</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="relative overflow-hidden rounded-lg shadow-xl">
+                        <div class="aspect-w-16 aspect-h-9">
+                            <iframe class="w-full h-64 md:h-80" src="https://www.youtube.com/embed/LiBlunYQd6k?si=VpQhpS01rm56qjeB" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-4">
+                            <h3 class="text-white text-lg font-bold">The Indian Khadi | Know Your Country | National Geographic</h3>
+                        </div>
+                    </div>
+                    
+                    <div class="relative overflow-hidden rounded-lg shadow-xl">
+                        <div class="aspect-w-16 aspect-h-9">
+                            <iframe class="w-full h-64 md:h-80" src="https://www.youtube.com/embed/W40djYVkA00?si=NAEXI_G-2dVCRZku" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-4">
+                            <h3 class="text-white text-lg font-bold"> SMART CLOTH FOR SMART INDIA | A DOCUMENTARY FILM PRODUCED BY BADLAO FOUNDATION</h3>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="text-center mt-12">
+                    <button class="bg-maroon hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105" onclick="navigate(null, 'videos')">
+                       <a href="https://www.youtube.com/results?search_query=khadi+fabric+documentary" class="btn">More Videos</a>
+
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Khadi Section -->
+        <section id="about" class="py-16 bg-beige dark:bg-gray-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-maroon dark:text-gold mb-4">About Khadi</h2>
+                    <p class="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">The fabric that became a symbol of India's independence movement</p>
+                </div>
+                
+                <div class="flex flex-col lg:flex-row items-center gap-12 mb-16">
+                    <div class="lg:w-1/2 animate-slide-up">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTn5qhyHUe6PuDPq07cFFEz9LACwwPOiWP45g&s" alt="Khadi Fabric" class="rounded-lg shadow-xl w-full h-auto">
+                    </div>
+                    <div class="lg:w-1/2 animate-slide-up">
+                        <h3 class="text-2xl font-bold text-maroon dark:text-white mb-4">The Meaning of Khadi</h3>
+                        <p class="text-gray-700 dark:text-gray-300 mb-4">Khadi, derived from the Hindi word 'khaddar', refers to hand-spun and hand-woven cloth. More than just a fabric, Khadi represents self-reliance, sustainability, and India's rich textile heritage.</p>
+                        <p class="text-gray-700 dark:text-gray-300 mb-6">Mahatma Gandhi transformed Khadi into a powerful symbol of the Swadeshi movement, making it the uniform of India's freedom struggle and a means to empower rural artisans.</p>
+                        <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md border-l-4 border-gold">
+                            <blockquote class="text-gray-700 dark:text-gray-300 italic">
+                                "Khadi is the sun of the village solar system. The planets are the various industries which can support Khadi in return for the heat and the sustenance they derive from it."
+                            </blockquote>
+                            <p class="text-right text-maroon dark:text-gold font-medium mt-2">- Mahatma Gandhi</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col lg:flex-row-reverse items-center gap-12">
+                    <div class="lg:w-1/2 animate-slide-up">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmrY2jJg3RslDHBTaz3193DpALiJuNfzOWXw&s" alt="Khadi Weaving" class="rounded-lg shadow-xl w-full h-auto">
+                    </div>
+                    <div class="lg:w-1/2 animate-slide-up">
+                        <h3 class="text-2xl font-bold text-maroon dark:text-white mb-4">The Significance of Khadi Today</h3>
+                        <p class="text-gray-700 dark:text-gray-300 mb-4">In contemporary times, Khadi has evolved from being just a freedom fabric to a sustainable fashion statement. Its eco-friendly production process and unique texture have made it popular worldwide.</p>
+                        <p class="text-gray-700 dark:text-gray-300 mb-6">Khadi supports rural employment, promotes sustainable fashion, and preserves traditional craftsmanship. Each piece tells a story of the artisan's skill and patience.</p>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="bg-white dark:bg-gray-700 p-4 rounded-lg shadow-md text-center">
+                                <i class="fas fa-hands-helping text-3xl text-gold mb-2"></i>
+                                <h4 class="font-bold text-maroon dark:text-white">Empowers Artisans</h4>
+                                <p class="text-sm text-gray-600 dark:text-gray-300">Supports over 5 lakh rural artisans</p>
+                            </div>
+                            <div class="bg-white dark:bg-gray-700 p-4 rounded-lg shadow-md text-center">
+                                <i class="fas fa-leaf text-3xl text-gold mb-2"></i>
+                                <h4 class="font-bold text-maroon dark:text-white">Eco-Friendly</h4>
+                                <p class="text-sm text-gray-600 dark:text-gray-300">Zero carbon footprint production</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Types of Khadi Section -->
+        <section id="types" class="py-16 bg-white dark:bg-gray-900">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-maroon dark:text-gold mb-4">Types of Khadi</h2>
+                    <p class="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">Discover the diverse varieties of Khadi fabric, each with its unique texture and characteristics</p>
+                </div>
+                
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-lg card-hover transition duration-300">
+                        <img src="https://craftatlas.co/wp-content/uploads/2020/07/1590830774_e856ca4a967bac5833b430befa1ffad3.jpg" alt="Cotton Khadi" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-maroon dark:text-white mb-2">Cotton Khadi</h3>
+                            <p class="text-gray-600 dark:text-gray-300 mb-4">The most common variety, known for its breathability and comfort. Perfect for India's tropical climate.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm font-medium text-gold">Best for: Summer wear</span>
+                                <button class="text-sm text-maroon dark:text-gold font-medium hover:underline" onclick="navigate(null, 'cotton')">Learn More</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-lg card-hover transition duration-300">
+                        <img src="https://suvetah.com/cdn/shop/products/Shot32WhiteFabricsMacrolr1500_3b3842b9-8849-4589-a1a8-14b6145cb87f.jpg?v=1638964498&width=1946" alt="Silk Khadi" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-maroon dark:text-white mb-2">Silk Khadi</h3>
+                            <p class="text-gray-600 dark:text-gray-300 mb-4">A luxurious variant with a natural sheen, often used for special occasions and formal wear.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm font-medium text-gold">Best for: Occasional wear</span>
+                                <button class="text-sm text-maroon dark:text-gold font-medium hover:underline" onclick="navigate(null, 'silk')">Learn More</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-lg card-hover transition duration-300">
+                        <img src="https://www.clothhouse.com/cdn/shop/files/Cloth-house-london-khadi-wool-cedar-grey-other_2a7d56c4-1c25-4b52-b2be-148bd8f82058_800x800.jpg?v=1695744046" alt="Woolen Khadi" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-maroon dark:text-white mb-2">Woolen Khadi</h3>
+                            <p class="text-gray-600 dark:text-gray-300 mb-4">Warm and durable, ideal for winter clothing. Primarily produced in northern regions of India.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm font-medium text-gold">Best for: Winter wear</span>
+                                <button class="text-sm text-maroon dark:text-gold font-medium hover:underline" onclick="navigate(null, 'wool')">Learn More</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-lg card-hover transition duration-300">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfg6HME4YjX0-jxWU9_0bjoJqpzAQDqZK7yJgqx8BBjo7sG9bUmMheMANOnFHqtR_RCrc&usqp=CAU" alt="Muslin Khadi" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-maroon dark:text-white mb-2">Muslin Khadi</h3>
+                            <p class="text-gray-600 dark:text-gray-300 mb-4">An ultra-fine, lightweight fabric with a rich history dating back to ancient India.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm font-medium text-gold">Best for: Delicate garments</span>
+                                <button class="text-sm text-maroon dark:text-gold font-medium hover:underline" onclick="navigate(null, 'muslin')">Learn More</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-lg card-hover transition duration-300">
+                        <img src="https://static.vecteezy.com/system/resources/thumbnails/049/931/035/small/assorted-colors-of-khadi-fabric-displayed-on-a-white-backdrop-photo.jpeg" alt="Designer Khadi" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-maroon dark:text-white mb-2">Designer Khadi</h3>
+                            <p class="text-gray-600 dark:text-gray-300 mb-4">Contemporary interpretations by fashion designers, blending traditional techniques with modern aesthetics.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm font-medium text-gold">Best for: Fashion statements</span>
+                                <button class="text-sm text-maroon dark:text-gold font-medium hover:underline" onclick="navigate(null, 'designer')">Learn More</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-lg card-hover transition duration-300">
+                        <img src="https://i.pinimg.com/originals/60/a7/37/60a737a5ae7ce5534438b69ea6e16d60.jpg" alt="Blended Khadi" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-maroon dark:text-white mb-2">Blended Khadi</h3>
+                            <p class="text-gray-600 dark:text-gray-300 mb-4">Innovative combinations with other natural fibers like linen or bamboo for enhanced properties.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm font-medium text-gold">Best for: Versatile use</span>
+                                <button class="text-sm text-maroon dark:text-gold font-medium hover:underline" onclick="navigate(null, 'blended')">Learn More</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How Khadi is Made Section -->
+        <section id="making" class="py-16 bg-beige dark:bg-gray-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-maroon dark:text-gold mb-4">How Khadi is Made</h2>
+                    <p class="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">The meticulous process behind creating authentic Khadi fabric</p>
+                </div>
+                
+                <div class="flex flex-col lg:flex-row items-center gap-12 mb-16">
+                    <div class="lg:w-1/2 animate-slide-up">
+                        <div class="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden shadow-xl">
+                            <iframe class="w-full h-64 md:h-80" src="https://www.youtube.com/embed/OjShHd-wFx8?si=_m51uUgZRju3N5dS" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div class="lg:w-1/2 animate-slide-up">
+                        <h3 class="text-2xl font-bold text-maroon dark:text-white mb-4">The Artisanal Process</h3>
+                        <p class="text-gray-700 dark:text-gray-300 mb-4">Khadi production is a completely manual process that involves several stages of meticulous craftsmanship. Each step is performed by skilled artisans using traditional tools and techniques.</p>
+                        <p class="text-gray-700 dark:text-gray-300 mb-6">From harvesting cotton to the final woven product, the entire process can take weeks to complete, resulting in a fabric that's truly unique with its characteristic uneven texture.</p>
+                        <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md border-l-4 border-gold">
+                            <blockquote class="text-gray-700 dark:text-gray-300 italic">
+                                "The spinning wheel represents to me the hope of the masses. The masses lost their freedom, such as it was, with the loss of the spinning wheel."
+                            </blockquote>
+                            <p class="text-right text-maroon dark:text-gold font-medium mt-2">- Mahatma Gandhi</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md text-center">
+                        <div class="w-16 h-16 bg-maroon rounded-full flex items-center justify-center mx-auto mb-4 text-white text-2xl">1</div>
+                        <h4 class="font-bold text-maroon dark:text-white mb-2">Cotton Harvesting</h4>
+                        <p class="text-gray-600 dark:text-gray-300 text-sm">Organic cotton is hand-picked from fields, ensuring the highest quality fibers.</p>
+                    </div>
+                    
+                    <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md text-center">
+                        <div class="w-16 h-16 bg-maroon rounded-full flex items-center justify-center mx-auto mb-4 text-white text-2xl">2</div>
+                        <h4 class="font-bold text-maroon dark:text-white mb-2">Ginning & Carding</h4>
+                        <p class="text-gray-600 dark:text-gray-300 text-sm">Cotton is cleaned and fibers are aligned using traditional wooden tools.</p>
+                    </div>
+                    
+                    <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md text-center">
+                        <div class="w-16 h-16 bg-maroon rounded-full flex items-center justify-center mx-auto mb-4 text-white text-2xl">3</div>
+                        <h4 class="font-bold text-maroon dark:text-white mb-2">Hand Spinning</h4>
+                        <p class="text-gray-600 dark:text-gray-300 text-sm">Fibers are spun into yarn using the charkha (spinning wheel).</p>
+                    </div>
+                    
+                    <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md text-center">
+                        <div class="w-16 h-16 bg-maroon rounded-full flex items-center justify-center mx-auto mb-4 text-white text-2xl">4</div>
+                        <h4 class="font-bold text-maroon dark:text-white mb-2">Hand Weaving</h4>
+                        <p class="text-gray-600 dark:text-gray-300 text-sm">Yarn is woven into fabric on handlooms by skilled weavers.</p>
+                    </div>
+                </div>
+                
+                <div class="mt-12 bg-white dark:bg-gray-700 rounded-lg shadow-lg p-8">
+                    <h3 class="text-2xl font-bold text-maroon dark:text-white mb-6 text-center">Why Handmade Matters</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 bg-maroon bg-opacity-10 p-3 rounded-full text-maroon dark:text-gold mr-4">
+                                <i class="fas fa-hand-holding-heart text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-maroon dark:text-white mb-1">Supports Artisans</h4>
+                                <p class="text-gray-600 dark:text-gray-300 text-sm">Each Khadi product provides livelihood to multiple rural artisans.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 bg-maroon bg-opacity-10 p-3 rounded-full text-maroon dark:text-gold mr-4">
+                                <i class="fas fa-leaf text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-maroon dark:text-white mb-1">Eco-Friendly</h4>
+                                <p class="text-gray-600 dark:text-gray-300 text-sm">Zero electricity used in production makes it truly sustainable.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 bg-maroon bg-opacity-10 p-3 rounded-full text-maroon dark:text-gold mr-4">
+                                <i class="fas fa-university text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-maroon dark:text-white mb-1">Preserves Heritage</h4>
+                                <p class="text-gray-600 dark:text-gray-300 text-sm">Keeps ancient textile traditions alive for future generations.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Khadi and Sustainability Section -->
+        <section id="sustainability" class="py-16 bg-white dark:bg-gray-900">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-maroon dark:text-gold mb-4">Khadi and Sustainability</h2>
+                    <p class="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">How Khadi leads the way in sustainable fashion and responsible consumption</p>
+                </div>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
+                    <div class="animate-slide-up">
+                        <h3 class="text-2xl font-bold text-maroon dark:text-white mb-6">The Environmental Benefits of Khadi</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 bg-maroon bg-opacity-10 p-3 rounded-full text-maroon dark:text-gold mr-4">
+                                    <i class="fas fa-bolt text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-maroon dark:text-white mb-1">Zero Energy Consumption</h4>
+                                    <p class="text-gray-600 dark:text-gray-300">Khadi production doesn't require electricity as it's entirely handmade, resulting in negligible carbon footprint.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 bg-maroon bg-opacity-10 p-3 rounded-full text-maroon dark:text-gold mr-4">
+                                    <i class="fas fa-tint text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-maroon dark:text-white mb-1">Minimal Water Usage</h4>
+                                    <p class="text-gray-600 dark:text-gray-300">Compared to conventional textile production, Khadi uses significantly less water (about 1/8th).</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 bg-maroon bg-opacity-10 p-
+                                </div>
+                            
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 bg-maroon bg-opacity-10 p-3 rounded-full text-maroon dark:text-gold mr-4">
+                                    <i class="fas fa-recycle text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-maroon dark:text-white mb-1">Biodegradable</h4>
+                                    <p class="text-gray-600 dark:text-gray-300">Being 100% natural, Khadi decomposes completely without leaving microplastics in the environment.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 bg-maroon bg-opacity-10 p-3 rounded-full text-maroon dark:text-gold mr-4">
+                                    <i class="fas fa-seedling text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-maroon dark:text-white mb-1">Organic Cultivation</h4>
+                                    <p class="text-gray-600 dark:text-gray-300">Most Khadi cotton is grown without synthetic pesticides or fertilizers, preserving soil health.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="animate-slide-up">
+                        <div class="bg-beige dark:bg-gray-700 p-8 rounded-lg shadow-lg h-full">
+                            <h3 class="text-2xl font-bold text-maroon dark:text-white mb-6 text-center">Khadi vs Conventional Textiles</h3>
+                            
+                            <div class="space-y-6">
+                                <div>
+                                    <div class="flex justify-between mb-1">
+                                        <span class="text-sm font-medium text-maroon dark:text-gold">Carbon Footprint</span>
+                                        <span class="text-sm font-medium text-gray-600 dark:text-gray-300">90% lower</span>
+                                    </div>
+                                    <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-600">
+                                        <div class="bg-maroon h-2.5 rounded-full" style="width: 10%"></div>
+                                    </div>
+                                </div>
+                                
+                                <div>
+                                    <div class="flex justify-between mb-1">
+                                        <span class="text-sm font-medium text-maroon dark:text-gold">Water Consumption</span>
+                                        <span class="text-sm font-medium text-gray-600 dark:text-gray-300">87.5% lower</span>
+                                    </div>
+                                    <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-600">
+                                        <div class="bg-maroon h-2.5 rounded-full" style="width: 12.5%"></div>
+                                    </div>
+                                </div>
+                                
+                                <div>
+                                    <div class="flex justify-between mb-1">
+                                        <span class="text-sm font-medium text-maroon dark:text-gold">Energy Usage</span>
+                                        <span class="text-sm font-medium text-gray-600 dark:text-gray-300">100% lower</span>
+                                    </div>
+                                    <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-600">
+                                        <div class="bg-maroon h-2.5 rounded-full" style="width: 0%"></div>
+                                    </div>
+                                </div>
+                                
+                                <div>
+                                    <div class="flex justify-between mb-1">
+                                        <span class="text-sm font-medium text-maroon dark:text-gold">Chemical Usage</span>
+                                        <span class="text-sm font-medium text-gray-600 dark:text-gray-300">95% lower</span>
+                                    </div>
+                                    <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-600">
+                                        <div class="bg-maroon h-2.5 rounded-full" style="width: 5%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="mt-8 bg-white dark:bg-gray-800 p-4 rounded-lg border border-maroon dark:border-gold">
+                                <p class="text-sm text-gray-600 dark:text-gray-300 text-center">
+                                    <i class="fas fa-info-circle text-maroon dark:text-gold mr-1"></i>
+                                    These figures are approximate comparisons between handmade Khadi and industrial textile production
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-beige dark:bg-gray-700 rounded-lg shadow-lg p-8">
+                    <h3 class="text-2xl font-bold text-maroon dark:text-white mb-6 text-center">Khadi's Role in Sustainable Development</h3>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md text-center">
+                            <div class="w-20 h-20 bg-maroon bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4 text-maroon dark:text-gold text-3xl">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <h4 class="font-bold text-maroon dark:text-white mb-2">Social Impact</h4>
+                            <p class="text-gray-600 dark:text-gray-300 text-sm">Provides employment to rural artisans, especially women, empowering them economically.</p>
+                        </div>
+                        
+                        <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md text-center">
+                            <div class="w-20 h-20 bg-maroon bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4 text-maroon dark:text-gold text-3xl">
+                                <i class="fas fa-globe-asia"></i>
+                            </div>
+                            <h4 class="font-bold text-maroon dark:text-white mb-2">Environmental Impact</h4>
+                            <p class="text-gray-600 dark:text-gray-300 text-sm">Reduces strain on natural resources and prevents pollution from textile waste.</p>
+                        </div>
+                        
+                        <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md text-center">
+                            <div class="w-20 h-20 bg-maroon bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4 text-maroon dark:text-gold text-3xl">
+                                <i class="fas fa-monument"></i>
+                            </div>
+                            <h4 class="font-bold text-maroon dark:text-white mb-2">Cultural Impact</h4>
+                            <p class="text-gray-600 dark:text-gray-300 text-sm">Preserves traditional craftsmanship and promotes India's textile heritage globally.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Shopping Guide Section -->
+        <section id="shopping" class="py-16 bg-beige dark:bg-gray-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-maroon dark:text-gold mb-4">Khadi Shopping Guide</h2>
+                    <p class="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">How to identify and purchase authentic Khadi products</p>
+                </div>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
+                    <div class="animate-slide-up">
+                        <h3 class="text-2xl font-bold text-maroon dark:text-white mb-6">Where to Buy Authentic Khadi</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 bg-maroon bg-opacity-10 p-3 rounded-full text-maroon dark:text-gold mr-4">
+                                    <i class="fas fa-store text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-maroon dark:text-white mb-1">KVIC Emporiums</h4>
+                                    <p class="text-gray-600 dark:text-gray-300">The Khadi and Village Industries Commission runs official outlets across India with certified products.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 bg-maroon bg-opacity-10 p-3 rounded-full text-maroon dark:text-gold mr-4">
+                                    <i class="fas fa-globe text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-maroon dark:text-white mb-1">KVIC Online Store</h4>
+                                    <p class="text-gray-600 dark:text-gray-300">Official e-commerce portal offering a wide range of authentic Khadi products.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 bg-maroon bg-opacity-10 p-3 rounded-full text-maroon dark:text-gold mr-4">
+                                    <i class="fas fa-tshirt text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-maroon dark:text-white mb-1">Reputable Designers</h4>
+                                    <p class="text-gray-600 dark:text-gray-300">Several ethical fashion designers work directly with Khadi artisans.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 bg-maroon bg-opacity-10 p-3 rounded-full text-maroon dark:text-gold mr-4">
+                                    <i class="fas fa-hands-helping text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-maroon dark:text-white mb-1">Artisan Cooperatives</h4>
+                                    <p class="text-gray-600 dark:text-gray-300">Direct purchase from weaver cooperatives ensures fair compensation.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="animate-slide-up">
+                        <div class="bg-white dark:bg-gray-700 p-8 rounded-lg shadow-lg h-full">
+                            <h3 class="text-2xl font-bold text-maroon dark:text-white mb-6">Identifying Genuine Khadi</h3>
+                            
+                            <div class="space-y-4">
+                                <div class="flex items-start">
+                                    <div class="flex-shrink-0 mt-1">
+                                        <i class="fas fa-check-circle text-maroon dark:text-gold"></i>
+                                    </div>
+                                    <div class="ml-3">
+                                        <p class="text-gray-700 dark:text-gray-300"><strong>KVIC Certification:</strong> Look for the official Khadi Mark label with certification number.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start">
+                                    <div class="flex-shrink-0 mt-1">
+                                        <i class="fas fa-check-circle text-maroon dark:text-gold"></i>
+                                    </div>
+                                    <div class="ml-3">
+                                        <p class="text-gray-700 dark:text-gray-300"><strong>Texture:</strong> Authentic Khadi has slight unevenness in the weave and a characteristic handspun feel.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start">
+                                    <div class="flex-shrink-0 mt-1">
+                                        <i class="fas fa-check-circle text-maroon dark:text-gold"></i>
+                                    </div>
+                                    <div class="ml-3">
+                                        <p class="text-gray-700 dark:text-gray-300"><strong>Price:</strong> Handmade Khadi is reasonably priced but not extremely cheap due to labor-intensive process.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start">
+                                    <div class="flex-shrink-0 mt-1">
+                                        <i class="fas fa-check-circle text-maroon dark:text-gold"></i>
+                                    </div>
+                                    <div class="ml-3">
+                                        <p class="text-gray-700 dark:text-gray-300"><strong>Burn Test:</strong> Pure Khadi burns quickly with a paper-like smell and leaves fine ash (for cotton/silk varieties).</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start">
+                                    <div class="flex-shrink-0 mt-1">
+                                        <i class="fas fa-check-circle text-maroon dark:text-gold"></i>
+                                    </div>
+                                    <div class="ml-3">
+                                        <p class="text-gray-700 dark:text-gray-300"><strong>Seller Reputation:</strong> Purchase from established, reputable sellers with transparent sourcing.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white dark:bg-gray-700 rounded-lg shadow-lg p-8">
+                    <h3 class="text-2xl font-bold text-maroon dark:text-white mb-6 text-center">Caring for Your Khadi</h3>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="flex flex-col items-center text-center">
+                            <div class="w-16 h-16 bg-maroon bg-opacity-10 rounded-full flex items-center justify-center mb-4 text-maroon dark:text-gold text-2xl">
+                                <i class="fas fa-hand-sparkles"></i>
+                            </div>
+                            <h4 class="font-bold text-maroon dark:text-white mb-2">Hand Wash</h4>
+                            <p class="text-gray-600 dark:text-gray-300 text-sm">Use mild detergent in cold water to preserve fabric integrity.</p>
+                        </div>
+                        
+                        <div class="flex flex-col items-center text-center">
+                            <div class="w-16 h-16 bg-maroon bg-opacity-10 rounded-full flex items-center justify-center mb-4 text-maroon dark:text-gold text-2xl">
+                                <i class="fas fa-wind"></i>
+                            </div>
+                            <h4 class="font-bold text-maroon dark:text-white mb-2">Dry Naturally</h4>
+                            <p class="text-gray-600 dark:text-gray-300 text-sm">Avoid machine drying - lay flat or hang in shade to dry.</p>
+                        </div>
+                        
+                        <div class="flex flex-col items-center text-center">
+                            <div class="w-16 h-16 bg-maroon bg-opacity-10 rounded-full flex items-center justify-center mb-4 text-maroon dark:text-gold text-2xl">
+                                <i class="fas fa-iron"></i>
+                            </div>
+                            <h4 class="font-bold text-maroon dark:text-white mb-2">Iron Carefully</h4>
+                            <p class="text-gray-600 dark:text-gray-300 text-sm">Use medium heat with cloth between iron and fabric.</p>
+                        </div>
+                        
+                        <div class="flex flex-col items-center text-center">
+                            <div class="w-16 h-16 bg-maroon bg-opacity-10 rounded-full flex items-center justify-center mb-4 text-maroon dark:text-gold text-2xl">
+                                <i class="fas fa-box-open"></i>
+                            </div>
+                            <h4 class="font-bold text-maroon dark:text-white mb-2">Proper Storage</h4>
+                            <p class="text-gray-600 dark:text-gray-300 text-sm">Store in breathable cotton bags with neem leaves to prevent moths.</p>
+                        </div>
+                        
+                        <div class="flex flex-col items-center text-center">
+                            <div class="w-16 h-16 bg-maroon bg-opacity-10 rounded-full flex items-center justify-center mb-4 text-maroon dark:text-gold text-2xl">
+                                <i class="fas fa-cut"></i>
+                            </div>
+                            <h4 class="font-bold text-maroon dark:text-white mb-2">Minimal Alterations</h4>
+                            <p class="text-gray-600 dark:text-gray-300 text-sm">Khadi frays easily - have alterations done by experienced tailors.</p>
+                        </div>
+                        
+                        <div class="flex flex-col items-center text-center">
+                            <div class="w-16 h-16 bg-maroon bg-opacity-10 rounded-full flex items-center justify-center mb-4 text-maroon dark:text-gold text-2xl">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <h4 class="font-bold text-maroon dark:text-white mb-2">Long-Term Care</h4>
+                            <p class="text-gray-600 dark:text-gray-300 text-sm">With proper care, Khadi garments last for decades and become softer with time.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- History of Khadi Section -->
+        <section id="history" class="py-16 bg-white dark:bg-gray-900">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-maroon dark:text-gold mb-4">History of Khadi</h2>
+                    <p class="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">The journey of Khadi from ancient India to the freedom movement and beyond</p>
+                </div>
+                
+                <div class="relative">
+                    <!-- Timeline line -->
+                    <div class="hidden md:block absolute left-1/2 h-full w-1 bg-maroon dark:bg-gold transform -translate-x-1/2"></div>
+                    
+                    <!-- Timeline items -->
+                    <div class="space-y-12">
+                        <!-- Item 1 -->
+                        <div class="relative md:grid md:grid-cols-2 md:gap-8">
+                            <div class="md:pr-8 md:text-right mb-4 md:mb-0">
+                                <h3 class="text-xl font-bold text-maroon dark:text-white">Ancient Origins</h3>
+                                <p class="text-sm text-gray-500 dark:text-gray-400">3000 BCE - 1500 CE</p>
+                            </div>
+                            <div class="md:pl-8 md:border-l-2 md:border-maroon dark:border-gold md:pb-12 timeline-item">
+                                <div class="bg-beige dark:bg-gray-700 p-6 rounded-lg shadow-md">
+                                    <p class="text-gray-700 dark:text-gray-300">Evidence of handspun, handwoven cotton fabrics in the Indus Valley Civilization. Khadi-like fabrics mentioned in ancient texts like the Vedas and Arthashastra.</p>
+                                    <p class="text-gray-700 dark:text-gray-300"></p>
+                                    
+                                    <p class="text-gray-700 dark:text-gray-300">India had a thriving cotton industry; archaeologists found spindles and cotton fabrics in Mohenjo-Daro and Harappa.</p>
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVlgLoJL43rdH8RaUH4Au0vbvAhqJTdNVh3A&s" alt="Ancient Textiles" class="mt-4 rounded-lg w-full h-48 object-cover">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Item 2 -->
+                        <div class="relative md:grid md:grid-cols-2 md:gap-8">
+                            <div class="md:pr-8 md:text-right mb-4 md:mb-0">
+                                <h3 class="text-xl font-bold text-maroon dark:text-white">Colonial Decline</h3>
+                                <p class="text-sm text-gray-500 dark:text-gray-400">1750 - 1900</p>
+                            </div>
+                            <div class="md:pl-8 md:border-l-2 md:border-maroon dark:border-gold md:pb-12 timeline-item">
+                                <div class="bg-beige dark:bg-gray-700 p-6 rounded-lg shadow-md">
+                                    <p class="text-gray-700 dark:text-gray-300">British policies systematically destroyed India's handloom industry, flooding markets with cheap mill-made cloth from England, leading to widespread unemployment among weavers.</p>
+                                    <img src="https://images.forbesindia.com/media/images/2011/Aug/topimg_15932_khadi_chaarkha.jpg?impolicy=website&width=900&height=600" alt="Colonial Textiles" class="mt-4 rounded-lg w-full h-48 object-cover">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Item 3 -->
+                        <div class="relative md:grid md:grid-cols-2 md:gap-8">
+                            <div class="md:pr-8 md:text-right mb-4 md:mb-0">
+                                <h3 class="text-xl font-bold text-maroon dark:text-white">Gandhi's Revolution</h3>
+                                <p class="text-sm text-gray-500 dark:text-gray-400">1918 - 1947</p>
+                            </div>
+                            <div class="md:pl-8 md:border-l-2 md:border-maroon dark:border-gold md:pb-12 timeline-item">
+                                <div class="bg-beige dark:bg-gray-700 p-6 rounded-lg shadow-md">
+                                    <p class="text-gray-700 dark:text-gray-300">Mahatma Gandhi transformed Khadi into a symbol of self-reliance and resistance. The charkha became central to the Swadeshi movement, with spinning made a daily ritual for freedom fighters.</p>
+                                    <img src="https://en-media.thebetterindia.com/uploads/2017/04/modi-i-n-khadi2.jpg" alt="Gandhi with Charkha" class="mt-4 rounded-lg w-full h-48 object-cover">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Item 4 -->
+                        <div class="relative md:grid md:grid-cols-2 md:gap-8">
+                            <div class="md:pr-8 md:text-right mb-4 md:mb-0">
+                                <h3 class="text-xl font-bold text-maroon dark:text-white">Post-Independence</h3>
+                                <p class="text-sm text-gray-500 dark:text-gray-400">1947 - 1990</p>
+                            </div>
+                            <div class="md:pl-8 md:border-l-2 md:border-maroon dark:border-gold md:pb-12 timeline-item">
+                                <div class="bg-beige dark:bg-gray-700 p-6 rounded-lg shadow-md">
+                                    <p class="text-gray-700 dark:text-gray-300">KVIC established in 1956 to promote Khadi. While initially seen as "poor man's cloth", Khadi remained a symbol of national pride but struggled against synthetic fabrics.</p>
+                                    <img src="data:image/jpeg;base64,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" alt="KVIC Logo" class="mt-4 rounded-lg w-full h-48 object-cover">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Item 5 -->
+                        <div class="relative md:grid md:grid-cols-2 md:gap-8">
+                            <div class="md:pr-8 md:text-right mb-4 md:mb-0">
+                                <h3 class="text-xl font-bold text-maroon dark:text-white">Modern Renaissance</h3>
+                                <p class="text-sm text-gray-500 dark:text-gray-400">2000 - Present</p>
+                            </div>
+                            <div class="md:pl-8 md:border-l-2 md:border-maroon dark:border-gold timeline-item">
+                                <div class="bg-beige dark:bg-gray-700 p-6 rounded-lg shadow-md">
+                                    <p class="text-gray-700 dark:text-gray-300">Khadi reinvented as premium sustainable fabric. Designers incorporate Khadi into contemporary fashion. Global demand grows as consumers seek ethical and eco-friendly textiles.</p>
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1kpQdmC38c3yLO_9QzZBLjZXJ8LP13K3xrA&s" alt="Modern Khadi Fashion" class="mt-4 rounded-lg w-full h-48 object-cover">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery" class="py-16 bg-beige dark:bg-gray-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-maroon dark:text-gold mb-4">Khadi Gallery</h2>
+                    <p class="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">Visual journey through the beauty and diversity of Khadi</p>
+                </div>
+                
+                <!-- Filter Buttons -->
+                <div class="flex flex-wrap justify-center gap-2 mb-8">
+                    <button class="px-4 py-2 rounded-full border border-maroon dark:border-gold text-maroon dark:text-gold hover:bg-maroon hover:text-white dark:hover:bg-gold dark:hover:text-gray-900 transition filter-btn" data-filter="all">All</button>
+                    <button class="px-4 py-2 rounded-full border border-maroon dark:border-gold text-maroon dark:text-gold hover:bg-maroon hover:text-white dark:hover:bg-gold dark:hover:text-gray-900 transition filter-btn" data-filter="fabric">Fabric</button>
+                    <button class="px-4 py-2 rounded-full border border-maroon dark:border-gold text-maroon dark:text-gold hover:bg-maroon hover:text-white dark:hover:bg-gold dark:hover:text-gray-900 transition filter-btn" data-filter="process">Process</button>
+                    <button class="px-4 py-2 rounded-full border border-maroon dark:border-gold text-maroon dark:text-gold hover:bg-maroon hover:text-white dark:hover:bg-gold dark:hover:text-gray-900 transition filter-btn" data-filter="fashion">Fashion</button>
+                    <button class="px-4 py-2 rounded-full border border-maroon dark:border-gold text-maroon dark:text-gold hover:bg-maroon hover:text-white dark:hover:bg-gold dark:hover:text-gray-900 transition filter-btn" data-filter="heritage">Heritage</button>
+                </div>
+                
+                <!-- Masonry Grid Gallery -->
+                <div class="masonry-grid">
+                    <!-- Item 1 -->
+                    <div class="mb-4 break-inside-avoid gallery-item" data-category="process">
+                        <div class="relative group overflow-hidden rounded-lg shadow-lg">
+                            <img src="data:image/jpeg;base64,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" alt="Spinning" class="w-full h-auto transition-transform duration-300 group-hover:scale-105">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                                <div class="text-white">
+                                    <h3 class="font-bold">Spinning Yarn</h3>
+                                    <p class="text-sm">Artisan spinning cotton on a charkha</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Item 2 -->
+                    <div class="mb-4 break-inside-avoid gallery-item" data-category="fabric">
+                        <div class="relative group overflow-hidden rounded-lg shadow-lg">
+                            <img src="https://green-tailor.com/wp-content/uploads/2024/03/khtw-2x40-twill-fabric.jpg" alt="Khadi Fabric" class="w-full h-auto transition-transform duration-300 group-hover:scale-105">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                                <div class="text-white">
+                                    <h3 class="font-bold">Handwoven Texture</h3>
+                                    <p class="text-sm">Close-up of authentic Khadi fabric</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Item 3 -->
+                    <div class="mb-4 break-inside-avoid gallery-item" data-category="fashion">
+                        <div class="relative group overflow-hidden rounded-lg shadow-lg">
+                            <img src="data:image/jpeg;base64,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" alt="Khadi Fashion" class="w-full h-auto transition-transform duration-300 group-hover:scale-105">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                                <div class="text-white">
+                                    <h3 class="font-bold">Contemporary Style</h3>
+                                    <p class="text-sm">Modern Khadi outfit by a designer</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Item 4 -->
+                    <div class="mb-4 break-inside-avoid gallery-item" data-category="heritage">
+                        <div class="relative group overflow-hidden rounded-lg shadow-lg">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWL9A27avYFWKpfT7lUHzhnK3mxSLHRY3dtA&s" alt="Historical Khadi" class="w-full h-auto transition-transform duration-300 group-hover:scale-105">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                                <div class="text-white">
+                                    <h3 class="font-bold">Freedom Movement</h3>
+                                    <p class="text-sm">Khadi as a symbol of independence</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Item 5 -->
+                    <div class="mb-4 break-inside-avoid gallery-item" data-category="process">
+                        <div class="relative group overflow-hidden rounded-lg shadow-lg">
+                            <img src="data:image/jpeg;base64,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" alt="Weaving" class="w-full h-auto transition-transform duration-300 group-hover:scale-105">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                                <div class="text-white">
+                                    <h3 class="font-bold">Handloom Weaving</h3>
+                                    <p class="text-sm">Artisan at work on a traditional loom</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Item 6 -->
+                    <div class="mb-4 break-inside-avoid gallery-item" data-category="fashion">
+                        <div class="relative group overflow-hidden rounded-lg shadow-lg">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSTIdrXsSCoX9RQesjk-8muCyUkaNBeX6Oyw&s" alt="Khadi Dress" class="w-full h-auto transition-transform duration-300 group-hover:scale-105">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                                <div class="text-white">
+                                    <h3 class="font-bold">Elegant Ensemble</h3>
+                                    <p class="text-sm">Khadi silk saree with traditional motifs</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Lightbox -->
+                <div class="lightbox-overlay" id="lightbox">
+                    <div class="lightbox-content relative">
+                        <button class="absolute -top-10 right-0 text-white text-3xl" onclick="closeLightbox()">&times;</button>
+                        <img src="" alt="" class="max-w-full max-h-screen" id="lightbox-img">
+                        <div class="text-white mt-2 text-center" id="lightbox-caption"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Videos Section -->
+        <section id="videos" class="py-16 bg-white dark:bg-gray-900">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-maroon dark:text-gold mb-4">Khadi Videos</h2>
+                    <p class="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">Watch and learn about Khadi's journey from fiber to fashion</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-lg card-hover transition duration-300">
+                        <div class="relative aspect-w-16 aspect-h-9">
+                            <img src="data:image/jpeg;base64,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" alt="Video Thumbnail" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <div class="w-16 h-16 bg-maroon bg-opacity-80 rounded-full flex items-center justify-center text-white text-2xl">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-maroon dark:text-white mb-2">Khadi - The Fabric Of Freedom</h3>
+                            <p class="text-gray-600 dark:text-gray-300 mb-4">A 18 years old documentary following history of khadi .</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-gray-500 dark:text-gray-400">8 min</span>
+                                <button class="text-sm text-maroon dark:text-gold font-medium hover:underline" onclick="openVideoModal('https://www.youtube.com/embed/Z5PJrzLdAbk?si=LHdAlMljWdL4FeSQ')">Watch Now</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-lg card-hover transition duration-300">
+                        <div class="relative aspect-w-16 aspect-h-9">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8rGMLd1OcK9sY7Ccl4ZdjQmcDty7b41ndnQ&s" alt="Video Thumbnail" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <div class="w-16 h-16 bg-maroon bg-opacity-80 rounded-full flex items-center justify-center text-white text-2xl">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-maroon dark:text-white mb-2">Khadi - एक amazing fabric</h3>
+                            <p class="text-gray-600 dark:text-gray-300 mb-4">A Short Video on khadi fabric by kanishk Shukla.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-gray-500 dark:text-gray-400">5 min</span>
+                                <button class="text-sm text-maroon dark:text-gold font-medium hover:underline" onclick="openVideoModal('https://www.youtube.com/embed/ZI0twtfLmE0?si=GBZG-EhR1JJTVAaY')">Watch Now</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-lg card-hover transition duration-300">
+                        <div class="relative aspect-w-16 aspect-h-9">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwMsn7ss7hjm-56PuRHY7z2OHk79ySK-EkgA&s" alt="Video Thumbnail" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <div class="w-16 h-16 bg-maroon bg-opacity-80 rounded-full flex items-center justify-center text-white text-2xl">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-maroon dark:text-white mb-2">Khadi Documentary | History of Gandhi & Charkha</h3>
+                            <p class="text-gray-600 dark:text-gray-300 mb-4">This film was created by Film Division. This film on Khadi fabric gives much information about Khadi. The documentary is historic itself. Modern documentaries too can not compete with this Documentary. </p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-gray-500 dark:text-gray-400">9 min</span>
+                                <button class="text-sm text-maroon dark:text-gold font-medium hover:underline" onclick="openVideoModal('https://www.youtube.com/embed/eJIBCKWnnsM?si=oI5uXIjRyKg0qznU')">Watch Now</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-lg card-hover transition duration-300">
+                        <div class="relative aspect-w-16 aspect-h-9">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSTIdrXsSCoX9RQesjk-8muCyUkaNBeX6Oyw&s" alt="Video Thumbnail" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <div class="w-16 h-16 bg-maroon bg-opacity-80 rounded-full flex items-center justify-center text-white text-2xl">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-maroon dark:text-white mb-2">How was it made? Traditional Indian Weaving</h3>
+                            <p class="text-gray-600 dark:text-gray-300 mb-4"> a significant part of the Indian economy, providing work to millions. The V&A visited Rajasthan Khadi Sangh to watch how they turn cotton into plain-woven cloth.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-gray-500 dark:text-gray-400">12 min</span>
+                                <button class="text-sm text-maroon dark:text-gold font-medium hover:underline" onclick="openVideoModal('https://www.youtube.com/embed/9OHbJQ90hfY?si=jUQkl4HxNqzYt_jz')">Watch Now</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-lg card-hover transition duration-300">
+                        <div class="relative aspect-w-16 aspect-h-9">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzAvgpbK_kHaVPUjZFOdKYniFMtRnPlnMkgg&s" alt="Video Thumbnail" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <div class="w-16 h-16 bg-maroon bg-opacity-80 rounded-full flex items-center justify-center text-white text-2xl">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-maroon dark:text-white mb-2">Indian Khadi | khadi - The Fabric of India | Incredible India | PuStack</h3>
+                            <p class="text-gray-600 dark:text-gray-300 mb-4">Khadi is naturally hand-woven fabric. Widely used in India, Pakistan, and Bangladesh. Commonly khadi is woven with cotton and also uses silk and wool which are spun on a charkha.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-gray-500 dark:text-gray-400"> 10 min</span>
+                                <button class="text-sm text-maroon dark:text-gold font-medium hover:underline" onclick="openVideoModal('https://www.youtube.com/embed/O6KyrJEDEy4?si=0sFCEKABdeWVmZHX')">Watch Now</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-lg card-hover transition duration-300">
+                        <div class="relative aspect-w-16 aspect-h-9">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxK__khyS7XZr2NeYCBemOojKzZxqStLWvfQ&s" alt="Video Thumbnail" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <div class="w-16 h-16 bg-maroon bg-opacity-80 rounded-full flex items-center justify-center text-white text-2xl">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-maroon dark:text-white mb-2">Khadi Documentry</h3>
+                            <p class="text-gray-600 dark:text-gray-300 mb-4">Innovations and challenges in bringing Khadi to global markets while preserving its essence.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-gray-500 dark:text-gray-400">10 min</span>
+                                <button class="text-sm text-maroon dark:text-gold font-medium hover:underline" onclick="openVideoModal('https://www.youtube.com/embed/lnIw1sKNXn8?si=6xUFiKxwl6yWuhnj')">Watch Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Video Modal -->
+                <div class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 hidden" id="videoModal">
+                    <div class="relative w-full max-w-4xl mx-4">
+                        <button class="absolute -top-10 right-0 text-white text-3xl" onclick="closeVideoModal()">&times;</button>
+                        <div class="aspect-w-16 aspect-h-9">
+                            <iframe id="videoFrame" class="w-full h-96" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-maroon dark:bg-gray-900 text-white pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Heritage Khadi</h3>
+                    <p class="mb-4">Dedicated to preserving and promoting India's handspun, handwoven textile heritage while supporting rural artisans.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-white hover:text-gold transition" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-white hover:text-gold transition" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-white hover:text-gold transition" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-white hover:text-gold transition" aria-label="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="#" class="text-white hover:text-gold transition" aria-label="Pinterest">
+                            <i class="fab fa-pinterest-p"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-gold transition" onclick="navigate(event, 'home')">Home</a></li>
+                        <li><a href="#" class="hover:text-gold transition" onclick="navigate(event, 'about')">About Khadi</a></li>
+                        <li><a href="#" class="hover:text-gold transition" onclick="navigate(event, 'types')">Types of Khadi</a></li>
+                        <li><a href="#" class="hover:text-gold transition" onclick="navigate(event, 'making')">How Khadi is Made</a></li>
+                        <li><a href="#" class="hover:text-gold transition" onclick="navigate(event, 'sustainability')">Sustainability</a></li>
+                        <li><a href="#" class="hover:text-gold transition" onclick="navigate(event, 'shopping')">Shopping Guide</a></li>
+                        <li><a href="#" class="hover:text-gold transition" onclick="navigate(event, 'history')">History</a></li>
+                        <li><a href="#" class="hover:text-gold transition" onclick="navigate(event, 'gallery')">Gallery</a></li>
+                        <li><a href="#" class="hover:text-gold transition" onclick="navigate(event, 'videos')">Videos</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Newsletter</h3>
+                    <p class="mb-4">Subscribe to our newsletter for updates on Khadi, artisan stories, and sustainable fashion.</p>
+                    <form class="space-y-4">
+                        <input type="email" placeholder="Your email address" class="w-full px-4 py-2 rounded bg-white bg-opacity-10 border border-white border-opacity-30 focus:outline-none focus:ring-2 focus:ring-gold focus:border-transparent">
+                        <button type="submit" class="bg-gold hover:bg-yellow-600 text-maroon font-bold py-2 px-6 rounded transition">Subscribe</button>
+                    </form>
+                    <div class="mt-8">
+                        <h4 class="font-bold mb-2">Contact Us</h4>
+                        <p class="mb-1"><i class="fas fa-envelope mr-2"></i> info@knowkhadi.</p>
+                        <p class="mb-1"><i class="fas fa-phone mr-2"></i> +91 87003 13098</p>
+                        <p><i class="fas fa-map-marker-alt mr-2"></i> New Delhi, India</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-white border-opacity-20 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p>&copy; 2025 Know Khadi . All rights reserved.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-gold transition">Privacy Policy</a>
+                    <a href="#" class="hover:text-gold transition">Terms of Service</a>
+                    <a href="#" class="hover:text-gold transition">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+       
+        
+        // Initialize - show home section
+        document.addEventListener('DOMContentLoaded', function() {
+            navigate(null, 'home');
+        });
+        
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+        
+        // Gallery filter functionality
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const galleryItems = document.querySelectorAll('.gallery-item');
+        
+        filterButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                // Update active button
+                filterButtons.forEach(btn => btn.classList.remove('filter-active', 'bg-maroon', 'text-white', 'dark:bg-gold', 'dark:text-gray-900'));
+                this.classList.add('filter-active', 'bg-maroon', 'text-white', 'dark:bg-gold', 'dark:text-gray-900');
+                
+                const filterValue = this.getAttribute('data-filter');
+                
+                // Filter items
+                galleryItems.forEach(item => {
+                    if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                        item.classList.remove('hidden');
+                    } else {
+                        item.classList.add('hidden');
+                    }
+                });
+            });
+        });
+        
+        // Lightbox functionality
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const lightboxCaption = document.getElementById('lightbox-caption');
+        
+        document.querySelectorAll('.masonry-grid img').forEach(img => {
+            img.addEventListener('click', function() {
+                lightboxImg.src = this.src;
+                lightboxCaption.textContent = this.alt;
+                lightbox.classList.add('active');
+            });
+        });
+        
+        function closeLightbox() {
+            lightbox.classList.remove('active');
+        }
+        
+        // Close lightbox when clicking outside
+        lightbox.addEventListener('click', function(e) {
+            if (e.target === lightbox) {
+                closeLightbox();
+            }
+        });
+        
+        // Video modal functionality
+        const videoModal = document.getElementById('videoModal');
+        const videoFrame = document.getElementById('videoFrame');
+        
+        function openVideoModal(videoUrl) {
+            videoFrame.src = videoUrl;
+            videoModal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+        
+        function closeVideoModal() {
+            videoFrame.src = '';
+            videoModal.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+        
+        // Close modal when clicking outside
+        videoModal.addEventListener('click', function(e) {
+            if (e.target === videoModal) {
+                closeVideoModal();
+            }
+        });
+        
+        // Dark mode toggle (system preference)
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+    </script>
+</body>
+</html>
